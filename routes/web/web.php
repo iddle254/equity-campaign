@@ -30,9 +30,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('lifestyle-improvements');
 // });
 
-// Route::get('/signup', function () {
-//     return view('journey-signup');
-// });
+Route::get('/congratulations-winner', function () {
+    return view('congratulations-page');
+});
 // End
 
 // stateless routes

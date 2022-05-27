@@ -16,10 +16,13 @@
             </div>
 
             {{-- Buttons --}}
-            <div class="d-flex button-section justify-content-around" data-aos="fade-down">
+            <div class="row d-flex button-section justify-content-around" data-aos="fade-down">
+              <div class="col-lg-6">
               <a href="{{route('get-achievement')}}" class="btn-learn-more">Start <span class="button-icon bi bi-chevron-right" aria-hidden="true"></span></a>
-
+            </div>
+              <div class="col-lg-6">
               <a href="#coming-soon" class="btn-learn-more">Invite a friend <span class="button-icon bi bi-chevron-right" aria-hidden="true"></span></a>
+            </div>
             </div>                
             </div>                
             </div>

@@ -3,7 +3,7 @@
     @section('content')
     <div class="col">
         <div class="row" style="height: 100vh;">
-            <div class="col-lg-6" style="background-color: #a32a29;">
+            <div class="col-lg-6 lifestyle-content" style="background-color: #a32a29;">
                 <div style=" display: flex; justify-content: center; flex-direction: column; line-height: 1.6;"> 
                 <div data-aos="fade-down"  class="d-flex" style="margin-top: 8px; justify-content: center;">
                     <div class="numberCircle">1</div>
@@ -20,20 +20,17 @@
 
                 <div data-aos="fade-up"  class="d-flex" style="justify-content: flex-start; margin-left: 20px">
 
-                {!!Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\LifestyleImprovementsController@store'])!!}
-                <br>
-                {!! Form::checkbox('lifestyle_improvements[]', 'equity_medical_cover', false, ['class'=>'checkbox']) !!}
-                {!! Form::label('equity_medical_cover', 'Taking medical cover from Equity', ['class'=>'checkbox-label']) !!}                
-                <br>
-                {!! Form::checkbox('lifestyle_improvements[]', 'equity_insurance_cover') !!}
-                {!! Form::label('equity_insurance_cover', 'Taking an insurance cover for my business/car', ['class'=>'checkbox-label']) !!} 
-                <br>
-               
-                <div class="form-group spaced">
-                    {!!Form::submit('Next', ['class'=> 'btn-learn-more']) !!}
-                 </div>
-
-                {!!Form::close()!!}
+                    <form action="#">
+                        <input type="checkbox" id="equity_medical_cover" name="equity_medical_cover" value="equity_medical_cover">
+                        <label class="checkbox-label" for="equity_medical_cover"> Taking medical cover from Equity</label><br>
+                        <input type="checkbox" id="equity_insurance_cover" name="equity_insurance_cover" value="equity_insurance_cover">
+                        <label class="checkbox-label" for="equity_insurance_cover"> Taking an insurance cover for my business/car</label><br>
+                         
+                        <div class="form-group spaced">
+                            <a type="submit" class="btn-learn-more">Next <span class="button-icon bi bi-chevron-right" aria-hidden="true"></span></a>
+                    </div>
+                      </form> 
+             
             </div>
             </div>
                 

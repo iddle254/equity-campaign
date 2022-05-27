@@ -36,7 +36,7 @@ h6 {
     bottom: 0;
     z-index: 9999;
     overflow: hidden;
-    background: #fff;
+    background: #a32a29;
 }
 
 #preloader:before {
@@ -45,7 +45,7 @@ h6 {
     top: calc(50% - 30px);
     left: calc(50% - 30px);
     border: 6px solid #ed502e;
-    border-top-color: white;
+    border-top-color: #a32a29;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -100,35 +100,6 @@ h6 {
     opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# nav1
---------------------------------------------------------------*/
-
-/* #nav1 {
-    background: #fff;
-    transition: all 0.5s;
-    z-index: 997;
-    padding: 20px 0;
-}
-#nav1.header-scrolled {
-    padding: 12px 0;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-#nav1 .logo {
-    font-size: 26px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-#nav1 .logo a {
-    color: #0b2341;
-}
-#nav1 .logo img {
-    max-height: 40px;
-} */
 .search-wrapper {
     border-radius: 20px;
     background-color: var(--search-area-bg);
@@ -169,7 +140,7 @@ h6 {
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
-    padding: 20px 0;
+    padding: 20px 0 20px 0;
 }
 #header.header-scrolled {
     padding: 12px 0;
@@ -294,6 +265,114 @@ h6 {
     left: 100%;
     visibility: visible;
 }
+/**
+* Media queries
+*/
+
+@media (max-width: 576px) {
+    .button-section.row {
+        flex-direction: column;
+        margin-left: 25%;
+    }
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 1200px) {
+    .button-section.row {
+        flex-direction: column;
+        margin-left: 25%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .row.content {
+        margin-bottom: 20px !important;
+        margin-top: -20px !important;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #hero p {
+        width: 50%;
+    }
+}
+@media (max-width: 992px) {
+    #hero {
+        height: 100vh;
+    }
+    #hero .carousel-container {
+        text-align: center;
+        top: 74px;
+    }
+    body {
+        overflow-y: scroll;
+    }
+    .achievements-image {
+        position: absolute;
+    }
+    .achievements-content {
+        background-image: url(../img//equity/member3.png);
+        background-size: cover;
+    }
+    .partnerships-content {
+        background-image: url(../img//equity/member4.png);
+        background-size: cover;
+    }
+    .lifestyle-content {
+        background-image: url(../img//equity/member5.png);
+        background-size: cover;
+    }
+    .advice-content {
+        background-image: url(../img//equity/member6.png);
+        background-size: cover;
+    }
+    .signup-content {
+        background-image: url(../img//equity/member7.png);
+        background-size: cover;
+    }
+    .partnerships-content .checkbox-label,
+    .lifestyle-content .checkbox-label,
+    .advice-content .checkbox-label,
+    .signup-content .checkbox-label {
+        color: #330c0c !important;
+    }
+    .partnerships-content h1,
+    .lifestyle-content h1,
+    .advice-content h1,
+    .signup-content h1 {
+        color: #330c0c !important;
+    }
+}
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 30px;
+    }
+}
+@media (min-width: 1024px) {
+    #hero .carousel-control-prev,
+    #hero .carousel-control-next {
+        width: 5%;
+    }
+}
+@media (max-height: 500px) {
+    #hero {
+        height: 120vh;
+    }
+}
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
 @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
         left: -90%;
@@ -318,15 +397,6 @@ h6 {
     color: #fff;
 }
 
-@media (max-width: 991px) {
-    .mobile-nav-toggle {
-        display: block;
-    }
-
-    .navbar ul {
-        display: none;
-    }
-}
 .navbar-mobile {
     position: fixed;
     overflow: hidden;
@@ -450,11 +520,7 @@ h6 {
     color: #fff;
     margin-top: 10px;
 }
-@media (min-width: 1200px) {
-    #hero p {
-        width: 50%;
-    }
-}
+
 #hero .carousel-inner .carousel-item {
     transition-property: opacity;
     background-position: center top;
@@ -608,31 +674,6 @@ h6 {
 .member-btn:hover:after {
     transform: translateY(-100%);
 }
-@media (max-width: 992px) {
-    #hero {
-        height: 100vh;
-    }
-    #hero .carousel-container {
-        text-align: center;
-        top: 74px;
-    }
-}
-@media (max-width: 768px) {
-    #hero h2 {
-        font-size: 30px;
-    }
-}
-@media (min-width: 1024px) {
-    #hero .carousel-control-prev,
-    #hero .carousel-control-next {
-        width: 5%;
-    }
-}
-@media (max-height: 500px) {
-    #hero {
-        height: 120vh;
-    }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -693,7 +734,8 @@ section {
 }
 
 .about .content .btn-learn-more,
-.background .content-container .button-section .btn-learn-more {
+.background .content-container .button-section .btn-learn-more,
+.spaced .btn-learn-more {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 14px;

@@ -3,7 +3,7 @@
     @section('content')
     <div class="col">
         <div class="row" style="height: 100vh;">
-            <div class="col-lg-6" style="background-color: #a32a29;">
+            <div class="col-lg-6 signup-content" style="background-color: #a32a29;">
                 <div style=" display: flex; justify-content: center; flex-direction: column; line-height: 1.6;"> 
                 <div data-aos="fade-down"  style="display: flex; justify-content: center; margin-top: 3em; margin-left: 10px;">
 
@@ -12,39 +12,27 @@
             </div>
 
                 <div data-aos="fade-up"  class="d-flex" style="justify-content: center; margin-left: 20px">
-
-                {!!Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\MembersController@store'])!!}
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                    <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                    </ul>
+                    <form action="#">
+                        <div class="form-group col">
+                        <label class="checkbox-label" for="name">Name*</label>
+                        <input placeholder="Please enter your name" class="form-control" type="text" id="name" name="name" >
+                    </div> 
+                        <br>
+                        <div class="form-group col">
+                        <label class="checkbox-label" for="phone_number"> Phone Number*</label>
+                        <input placeholder="Please enter your phone number" class="form-control" type="text" id="phone_number" name="phone_number">
                     </div>
-                @endif
-                <br>
-                <div class="form-group col">
-                    {!!Form::label('name', 'Name*' , ['class'=>'checkbox-label'])!!}
-                    {!!Form::text('name', null, ['class'=>'form-control', 'placeholder' => 'Please enter your name'])!!}
-                </div> 
-                <br>
-                <div class="form-group col">
-                    {!!Form::label('phone_number', 'Phone Number*', ['class'=>'checkbox-label'])!!}
-                    {!!Form::number('phone_number', null, ['class'=>'form-control', 'placeholder' => 'Please enter your phone number'])!!}
-                </div>       
-                <br>
-                <div class="form-group col">
-                    {!!Form::label('email', 'Email*', ['class'=>'checkbox-label'])!!}
-                    {!!Form::email('email', null, ['class'=>'form-control', 'placeholder' => 'Please enter your email'])!!}
-                 </div>
-                <br>
-               
-                <div class="form-group spaced">
-                    {!!Form::submit('Submit', ['class'=> 'btn-learn-more']) !!}
-                 </div>
-
-                {!!Form::close()!!}
+                        <br>
+                        <div class="form-group col">
+                            <label class="checkbox-label" for="email">Email*</label>
+                        <input placeholder="Please enter your email" class="form-control" type="text" id="email" name="email">
+                    </div>
+                        <br>
+                         
+                        <div class="form-group spaced">
+                            <a type="submit" class="btn-learn-more">Submit<span class="button-icon bi bi-chevron-right" aria-hidden="true"></span></a>
+                    </div>
+                      </form>
             </div>
             </div>
                 
